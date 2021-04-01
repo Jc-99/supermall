@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // var a = []
+    // for (let i = 0; i < 10; i++) {
+    //     a[i] = function () {
+    //         console.log(i)
+    //         console.log(a)
+    //     }
+    // }
+    // a[6]()
+
+    var constantize = (obj) => {
+        Object.freeze(obj);
+        Object.keys(obj).forEach((key, i) => {
+            if (typeof obj[key] === 'object') {
+                constantize(obj[key])
+            }
+        })
+    }
+   
+</script>
+</html>
